@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import LoginService from '../services/LoginService';
+import LoginService from '../service/LoginService';
 
 export default class LoginController {
   private service: LoginService;
