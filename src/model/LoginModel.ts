@@ -12,11 +12,14 @@ export default class LoginModel {
   public async getLoginInfo(body: IUser): Promise<IUser> {
     const { username } = body;
 
-    const [[user]] = await this.connection.execute<(
-    IUser & RowDataPacket[])>(
-      'SELECT username, password FROM Trybesmith.Users WHERE (username = ?)',
-      [username],
-      );
+    const user = username
+    console.log(user);
+    
+    // const [[user]] = await this.connection.execute<(
+    // IUser & RowDataPacket[])>(
+    //   'SELECT username, password FROM Trybesmith.Users WHERE (username = ?)',
+    //   [username],
+    //   );
 
     return user as IUser;
   }

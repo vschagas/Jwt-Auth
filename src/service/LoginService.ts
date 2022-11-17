@@ -1,7 +1,7 @@
 import { IUser } from '../interfaces/User';
-import LoginModel from '../models/LoginModel';
-import HttpException from '../shared/http.exception';
-import JwtShared from '../shared/jwt';
+import LoginModel from '../model/LoginModel';
+import HttpException from '../validation/http.exception';
+import JwtShared from '../Jwt/jwt';
 
 export default class LoginService {
   private model: LoginModel;
