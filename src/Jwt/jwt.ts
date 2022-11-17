@@ -12,7 +12,10 @@ export default class JwtShared {
   generateJwt({ email, password, id }: IUser) {
     const SECRET = process.env.JWT_SECRET as string;
 
-    const token = this.jwt.sign({ email, password, id }, SECRET);
+    const token = this.jwt.sign({ email, password, id }, SECRET, {
+      expiresIn: "1d",
+      algorithm: "HS256"
+    });
 
     return token;
   }
