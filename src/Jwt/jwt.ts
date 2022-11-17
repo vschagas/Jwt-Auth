@@ -9,10 +9,10 @@ export default class JwtShared {
     this.jwt = jwt;
   }
 
-  generateJwt({ username, password, id }: IUser) {
+  generateJwt({ email, password, id }: IUser) {
     const SECRET = process.env.JWT_SECRET as string;
 
-    const token = this.jwt.sign({ username, password, id }, SECRET);
+    const token = this.jwt.sign({ email, password, id }, SECRET);
 
     return token;
   }

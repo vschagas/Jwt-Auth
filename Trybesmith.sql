@@ -3,15 +3,15 @@ CREATE SCHEMA IF NOT EXISTS Trybesmith;
 
 CREATE TABLE Trybesmith.Users (
   id INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL,
-  username TEXT NOT NULL,
+  email TEXT NOT NULL,
   password TEXT NOT NULL
 );
 
 
 INSERT INTO
-  Trybesmith.Users (username, password)
+  Trybesmith.Users (email, password)
 VALUES
-  ("Homem Aranha", "senha");
+  ("lewishamilton@gmail.com", "123456");
 
 
 
